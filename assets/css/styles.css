@@ -126,7 +126,11 @@ img {
 
 .site-nav a:hover,
 .site-nav a:focus {
-    background: #171a20;
+    /* Gradient silver for navigation hover */
+    background: linear-gradient(135deg, var(--silver-start), var(--silver-mid), var(--silver-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     border-color: #232a35
 }
 
