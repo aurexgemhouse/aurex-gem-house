@@ -353,13 +353,52 @@ select:focus,
 .site-footer {
     border-top: 1px solid #1b1f27;
     background: #0a0b0e;
-    padding: 1rem
+    padding: 3rem 1rem 1.5rem
 }
 
 .footer-columns {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1rem
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto 2rem
+}
+
+.footer-columns section h2 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600
+}
+
+.footer-columns ul {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+
+.footer-columns li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6
+}
+
+.footer-columns a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.2s ease
+}
+
+.footer-columns a:hover {
+    background: linear-gradient(135deg, var(--silver-start), var(--silver-mid), var(--silver-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text
+}
+
+.footer-desc {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--body-color)
 }
 
 .icon {
