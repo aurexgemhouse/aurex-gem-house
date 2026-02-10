@@ -268,7 +268,14 @@ main {
     border: 1px solid var(--edge);
     border-radius: .8rem;
     padding: 1rem;
-    text-align: center
+    text-align: center;
+    transition: all 0.3s ease
+}
+
+.gem-card:hover,
+.item-card:hover {
+    border-color: #3a404e;
+    transform: translateY(-2px)
 }
 
 .gem-card img,
@@ -284,6 +291,15 @@ main {
 .item-card h3 {
     margin: .75rem 0 .25rem;
     font-weight: 700
+}
+
+.gem-card:hover h3,
+.item-card:hover h3 {
+    /* Gradient silver on hover */
+    background: linear-gradient(135deg, var(--silver-start), var(--silver-mid), var(--silver-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text
 }
 
 .gem-card p,
