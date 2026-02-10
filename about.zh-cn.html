@@ -30,7 +30,6 @@
         <li><a href="astrology.html">Astrology</a></li>
         <li><a href="planets.html">Planets</a></li>
         <li><a href="zodiac.html">Chinese Zodiac</a></li>
-        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
     <div class="lang-switch" role="group" aria-label="Language switcher">
@@ -52,7 +51,20 @@
         <li>Custom cuts, matched pairs, calibrated parcels</li>
       </ul>
     </section>
-  </main>
+    <section class='section' aria-labelledby='c1'>
+      <h2 id='c1'>Contact Us</h2>
+      <p>We respond within 24 hours. No-obligation enquiries welcome.</p>
+      <form class="contact-form" novalidate aria-describedby="contact-help">
+        <p id="contact-help" class="sr">All fields marked with * are required.</p>
+        <div class="form-row"><label for="name">Name *</label><input id="name" name="name" type="text" required aria-required="true" /></div>
+        <div class="form-row"><label for="email">Email *</label><input id="email" name="email" type="email" inputmode="email" required aria-required="true" /></div>
+        <div class="form-row"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" inputmode="tel" placeholder="+61 ..." /></div>
+        <div class="form-row"><label for="message">Message *</label><textarea id="message" name="message" rows="6" required aria-required="true"></textarea></div>
+        <div class="form-row"><label for="country">Country/Region</label><select id="country" name="country"><option>Australia</option><option>China</option><option>Hong Kong</option><option>Taiwan</option><option>Japan</option><option>Other</option></select></div>
+        <div class="form-row"><button type="submit" class="btn">Send Enquiry</button></div>
+        <p class="muted">By sending, you agree to be contacted by Aurex Gem House. No data is stored on this site; the form opens your email client.</p>
+      </form>
+    </section>  </main>
   <footer class="site-footer" role="contentinfo">
     <div class="footer-columns">
       <section aria-labelledby="contact-heading">
