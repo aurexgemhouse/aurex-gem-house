@@ -1,0 +1,98 @@
+/* =========================
+   AUREX GEM HOUSE BRAND CSS
+   ========================= */
+
+:root {
+  --black-primary: #060708;
+  --black-secondary: #464749;
+  --platinum-white: #FAFAFA;
+  --silver-gray: #C4C5C6;
+  --steel-gray: #8A8C8F;
+}
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--black-primary);
+  color: var(--platinum-white);
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 1px solid var(--steel-gray);
+}
+
+.logo {
+  max-height: 70px;
+}
+
+/* Language Switch */
+.lang-switch a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: var(--silver-gray);
+  font-size: 14px;
+}
+
+.lang-switch a:hover {
+  color: var(--platinum-white);
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: var(--silver-gray);
+  font-size: 16px;
+}
+
+/* Gem Section */
+.gems {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  padding: 80px 60px;
+}
+
+.gem-card {
+  background-color: var(--black-secondary);
+  padding: 40px;
+  border: 1px solid var(--steel-gray);
+}
+
+.gem-card h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 10px;
+}
+
+.gem-card p {
+  color: var(--silver-gray);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 40px;
+  border-top: 1px solid var(--steel-gray);
+  color: var(--silver-gray);
+}
