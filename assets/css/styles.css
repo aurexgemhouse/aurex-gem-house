@@ -333,6 +333,42 @@ select:focus,
 }
 
 @media (max-width: 640px) {
+    .site-header {
+        flex-wrap: wrap;
+        padding: .5rem;
+        gap: .5rem
+    }
+
+    .branding {
+        order: 1;
+        flex: 0 0 auto
+    }
+
+    .lang-switch {
+        position: relative;
+        top: auto;
+        right: auto;
+        order: 2;
+        margin-left: auto;
+        flex: 0 0 auto
+    }
+
+    .site-nav {
+        order: 3;
+        flex: 1 1 100%;
+        width: 100%
+    }
+
+    .site-nav ul {
+        justify-content: flex-start;
+        gap: .5rem
+    }
+
+    .site-nav a {
+        padding: .4rem .6rem;
+        font-size: .95rem
+    }
+
     .logo-img {
         max-height: 50px;
         max-width: 150px
