@@ -4,7 +4,15 @@
     --text: #ededed;
     --muted: #c0c0c0;
     --edge: #2a2f3b;
-    --focus: #c7d2fe
+    --focus: #c7d2fe;
+    /* Gradient Gold - AA compliant */
+    --gold-start: #FFD700;
+    --gold-mid: #FDB931;
+    --gold-end: #FFA500;
+    /* Gradient Silver - AA compliant */
+    --silver-start: #F5F5F5;
+    --silver-mid: #E0E0E0;
+    --silver-end: #D3D3D3
 }
 
 * {
@@ -24,8 +32,31 @@ html {
 body {
     margin: 0;
     background: var(--bg);
-    color: var(--text);
+    color: #E8E8E8;
     font: 400 1.04rem/1.7 system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", Ubuntu, "Helvetica Neue", Arial
+}
+
+/* Headings with gradient silver */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    background: linear-gradient(135deg, var(--silver-start), var(--silver-mid), var(--silver-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+    background-size: 200% auto
+}
+
+/* Paragraphs and general text with subtle silver */
+p,
+li,
+span,
+a:not(.btn):not(.site-nav a):not(.lang-switch button) {
+    color: #D8D8D8
 }
 
 img {
@@ -83,9 +114,14 @@ img {
     display: block;
     padding: .5rem .75rem;
     border-radius: .5rem;
-    color: var(--text);
     text-decoration: none;
-    border: 1px solid transparent
+    border: 1px solid transparent;
+    /* Gradient gold for navigation */
+    background: linear-gradient(135deg, var(--gold-start), var(--gold-mid), var(--gold-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 500
 }
 
 .site-nav a:hover,
@@ -112,11 +148,17 @@ img {
 
 .lang-switch button {
     background: #151821;
-    color: var(--text);
     border: 1px solid var(--edge);
     padding: .38rem .58rem;
     border-radius: .4rem;
-    cursor: pointer
+    cursor: pointer;
+    /* Gradient gold for language buttons */
+    color: transparent;
+    background-image: linear-gradient(135deg, var(--gold-start), var(--gold-mid), var(--gold-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 500
 }
 
 .lang-switch button[aria-pressed="true"] {
@@ -179,10 +221,16 @@ main {
     display: inline-block;
     background: linear-gradient(180deg, #2a2f3b, #171a20);
     border: 1px solid #3a404e;
-    color: var(--text);
     padding: .7rem 1rem;
     border-radius: .6rem;
-    text-decoration: none
+    text-decoration: none;
+    font-weight: 600;
+    /* Gradient gold for buttons */
+    color: transparent;
+    background-image: linear-gradient(135deg, var(--gold-start), var(--gold-mid), var(--gold-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text
 }
 
 .hero-video {
