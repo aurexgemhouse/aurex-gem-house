@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Gem - Test Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            color: #333;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .section-title {
+            margin-top: 25px;
+            margin-bottom: 10px;
+            color: #764ba2;
+            font-size: 16px;
+            font-weight: bold;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        .info-box {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+            color: #0d47a1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🔮 My Gem Recommendation</h1>
+        <p class="subtitle">Test Form - Submit Your Gemstone Preferences</p>
+
+        <div class="info-box">
+            ✨ This form will save your gemstone recommendations to the Google Sheet. Fill out the form and click submit!
+        </div>
+
+        <form
+            action="https://script.google.com/macros/s/AKfycbydRp9b4M5UVvKYyMRk2viSpWxPQXFkphO8T8jPsyJ24MgHTidJr1LRyH8ClEALRy4v/exec"
+            method="POST">
+
+            <!-- Customer Information -->
+            <div class="section-title">👤 Customer Information</div>
+
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" required placeholder="John Doe">
+
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required placeholder="john@example.com">
+
+            <label for="mobile">Mobile Number</label>
+            <input type="tel" id="mobile" name="mobile" placeholder="+61 412 345 678">
+
+            <div class="form-row">
+                <div>
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob">
+                </div>
+                <div>
+                    <label for="timezone">Timezone</label>
+                    <select id="timezone" name="timezone">
+                        <option value="Australia/Sydney">Australia/Sydney</option>
+                        <option value="Australia/Melbourne">Australia/Melbourne</option>
+                        <option value="Australia/Brisbane">Australia/Brisbane</option>
+                        <option value="Australia/Perth">Australia/Perth</option>
+                    </select>
+                </div>
+            </div>
+
+            <label for="type">Recommendation Type</label>
+            <select id="type" name="type">
+                <option value="Personal">Personal</option>
+                <option value="Gift">Gift</option>
+                <option value="Investment">Investment</option>
+            </select>
+
+            <!-- Gemstone Recommendations -->
+            <div class="section-title">💎 Recommended Gemstones</div>
+
+            <div class="form-row">
+                <div>
+                    <label for="birthGem">Birthstone</label>
+                    <input type="text" id="birthGem" name="birthGem" placeholder="e.g., Emerald">
+                </div>
+                <div>
+                    <label for="weightBirth">Preferred Weight</label>
+                    <select id="weightBirth" name="weightBirth">
+                        <option value="">Select...</option>
+                        <option value="Below 1ct">Below 1ct</option>
+                        <option value="1-2ct">1-2 carats</option>
+                        <option value="2-3ct">2-3 carats</option>
+                        <option value="3-5ct">3-5 carats</option>
+                        <option value="5ct+">5+ carats</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div>
+                    <label for="astroGem">Astrology Gem</label>
+                    <input type="text" id="astroGem" name="astroGem" placeholder="e.g., Ruby">
+                </div>
+                <div>
+                    <label for="weightAstro">Preferred Weight</label>
+                    <select id="weightAstro" name="weightAstro">
+                        <option value="">Select...</option>
+                        <option value="Below 1ct">Below 1ct</option>
+                        <option value="1-2ct">1-2 carats</option>
+                        <option value="2-3ct">2-3 carats</option>
+                        <option value="3-5ct">3-5 carats</option>
+                        <option value="5ct+">5+ carats</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div>
+                    <label for="planetGem">Planetary Gem</label>
+                    <input type="text" id="planetGem" name="planetGem" placeholder="e.g., Blue Sapphire">
+                </div>
+                <div>
+                    <label for="weightPlanet">Preferred Weight</label>
+                    <select id="weightPlanet" name="weightPlanet">
+                        <option value="">Select...</option>
+                        <option value="Below 1ct">Below 1ct</option>
+                        <option value="1-2ct">1-2 carats</option>
+                        <option value="2-3ct">2-3 carats</option>
+                        <option value="3-5ct">3-5 carats</option>
+                        <option value="5ct+">5+ carats</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div>
+                    <label for="chineseGem">Chinese Zodiac</label>
+                    <input type="text" id="chineseGem" name="chineseGem" placeholder="e.g., Dragon">
+                </div>
+                <div>
+                    <label for="weightChinese">Preferred Weight</label>
+                    <select id="weightChinese" name="weightChinese">
+                        <option value="">Select...</option>
+                        <option value="Below 1ct">Below 1ct</option>
+                        <option value="1-2ct">1-2 carats</option>
+                        <option value="2-3ct">2-3 carats</option>
+                        <option value="3-5ct">3-5 carats</option>
+                        <option value="5ct+">5+ carats</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div>
+                    <label for="variantGem">Variant Gem</label>
+                    <input type="text" id="variantGem" name="variantGem" placeholder="e.g., Water Dragon">
+                </div>
+                <div>
+                    <label for="weightVariant">Preferred Weight</label>
+                    <select id="weightVariant" name="weightVariant">
+                        <option value="">Select...</option>
+                        <option value="Below 1ct">Below 1ct</option>
+                        <option value="1-2ct">1-2 carats</option>
+                        <option value="2-3ct">2-3 carats</option>
+                        <option value="3-5ct">3-5 carats</option>
+                        <option value="5ct+">5+ carats</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Hidden field for redirect -->
+            <input type="hidden" name="redirect" value="https://aurexgemhouse.store/thank-you.html">
+
+            <button type="submit">✨ Submit My Recommendations</button>
+        </form>
+    </div>
+</body>
+
+</html>
