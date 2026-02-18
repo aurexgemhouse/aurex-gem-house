@@ -126,11 +126,15 @@ assets/
 ## 📝 Content Guidelines
 
 See individual documentation files for details:
+- `MIGRATION_GUIDE.md` - **Complete migration instructions for moving to new laptop**
+- `FILE_SYSTEM_INVENTORY.md` - **Detailed file system inventory and structure**
 - `GEMSTONE-CONTENT-AUSTRALIAN-MARKET.md` - Professional copywriting for each gemstone
 - `GEMSTONE-LIST.md` - Complete inventory of 42+ gemstones
 - `GEMSTONE-PAGE-MASTER-TEMPLATE.md` - Template for creating new gemstone pages
 - `style-guide.md` - Design and content standards
 - `gemini.md` - Development context and AI assistant notes
+- `AUREX_MYGEM_BACKEND_SETUP.md` - Backend setup guide
+- `APPS_SCRIPT_CODE.md` - Google Apps Script code reference
 
 ---
 
