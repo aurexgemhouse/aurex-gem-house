@@ -459,6 +459,97 @@ select:focus,
     color: var(--muted)
 }
 
+/* Aurelia CTA Banner */
+.aurelia-cta-section {
+    margin-bottom: 2rem;
+}
+
+.aurelia-banner {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(201, 168, 76, 0.3);
+    background: linear-gradient(135deg, rgba(30, 30, 42, 0.8), rgba(18, 18, 26, 0.95));
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+.aurelia-banner:hover {
+    border-color: var(--gold-start);
+    box-shadow: 0 0 40px rgba(201, 168, 76, 0.15), 0 0 80px rgba(201, 168, 76, 0.05);
+    transform: translateY(-2px);
+}
+
+.aurelia-banner-glow {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 50% 50%, rgba(201, 168, 76, 0.06), transparent 60%);
+    pointer-events: none;
+    animation: bannerGlowPulse 4s ease-in-out infinite;
+}
+
+@keyframes bannerGlowPulse {
+
+    0%,
+    100% {
+        opacity: 0.3;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.aurelia-banner-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    z-index: 1;
+}
+
+.aurelia-banner-icon {
+    font-size: 2.5rem;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.aurelia-banner-title {
+    font-family: Didot, "Bodoni Moda", "Times New Roman", serif;
+    font-size: 1.5rem;
+    margin: 0 0 0.25rem;
+    background: linear-gradient(135deg, var(--gold-start), var(--gold-mid), var(--gold-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+}
+
+.aurelia-banner-desc {
+    color: var(--muted);
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.aurelia-banner-arrow {
+    font-size: 1.8rem;
+    color: var(--gold-start);
+    margin-left: auto;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.aurelia-banner:hover .aurelia-banner-arrow {
+    transform: translateX(6px);
+}
+
 /* Responsive */
 @media (max-width: 980px) {
     .hero-inner {

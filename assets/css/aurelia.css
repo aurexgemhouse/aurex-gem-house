@@ -1,0 +1,980 @@
+/* =============================================
+   AURELIA – Gem Intelligence Engine
+   Conversational UI Styles
+   ============================================= */
+
+/* ---------- CSS Variables ---------- */
+:root {
+    --aur-bg: #0b0b0d;
+    --aur-panel: #121216;
+    --aur-chat-bg: rgba(18, 18, 22, 0.85);
+    --aur-border: #2a2f3b;
+    --aur-text: #ededed;
+    --aur-muted: #9a9aaa;
+    --aur-gold-start: #FFD700;
+    --aur-gold-mid: #FDB931;
+    --aur-gold-end: #FFA500;
+    --aur-silver-start: #F5F5F5;
+    --aur-silver-mid: #E0E0E0;
+    --aur-silver-end: #D3D3D3;
+    --aur-accent: #c9a84c;
+    --aur-glow: rgba(201, 168, 76, 0.15);
+    --aur-gem-purple: #9966cc;
+    --aur-gem-blue: #4a7cc9;
+}
+
+/* ---------- Aurelia App Container ---------- */
+#aurelia-app {
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 1rem 3rem;
+    overflow: hidden;
+}
+
+/* ---------- Floating Gem Particles ---------- */
+.aurelia-particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0;
+    animation: particleFloat linear infinite;
+}
+
+.particle:nth-child(1) {
+    width: 4px;
+    height: 4px;
+    left: 10%;
+    background: var(--aur-gold-start);
+    animation-duration: 12s;
+    animation-delay: 0s;
+}
+
+.particle:nth-child(2) {
+    width: 3px;
+    height: 3px;
+    left: 25%;
+    background: var(--aur-gem-purple);
+    animation-duration: 15s;
+    animation-delay: 2s;
+}
+
+.particle:nth-child(3) {
+    width: 5px;
+    height: 5px;
+    left: 40%;
+    background: var(--aur-silver-mid);
+    animation-duration: 18s;
+    animation-delay: 4s;
+}
+
+.particle:nth-child(4) {
+    width: 3px;
+    height: 3px;
+    left: 55%;
+    background: var(--aur-gem-blue);
+    animation-duration: 14s;
+    animation-delay: 1s;
+}
+
+.particle:nth-child(5) {
+    width: 4px;
+    height: 4px;
+    left: 70%;
+    background: var(--aur-gold-mid);
+    animation-duration: 16s;
+    animation-delay: 3s;
+}
+
+.particle:nth-child(6) {
+    width: 3px;
+    height: 3px;
+    left: 85%;
+    background: var(--aur-gem-purple);
+    animation-duration: 13s;
+    animation-delay: 5s;
+}
+
+.particle:nth-child(7) {
+    width: 5px;
+    height: 5px;
+    left: 15%;
+    background: var(--aur-gold-end);
+    animation-duration: 17s;
+    animation-delay: 6s;
+}
+
+.particle:nth-child(8) {
+    width: 4px;
+    height: 4px;
+    left: 60%;
+    background: var(--aur-silver-start);
+    animation-duration: 11s;
+    animation-delay: 7s;
+}
+
+@keyframes particleFloat {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.6;
+    }
+
+    90% {
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: translateY(-10vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* ---------- Chat Container (Glassmorphism) ---------- */
+.aurelia-container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 720px;
+    background: rgba(18, 18, 26, 0.75);
+    backdrop-filter: saturate(140%) blur(16px);
+    -webkit-backdrop-filter: saturate(140%) blur(16px);
+    border: 1px solid rgba(201, 168, 76, 0.2);
+    border-radius: 1.2rem;
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.5),
+        0 0 60px rgba(201, 168, 76, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------- Aurelia Header ---------- */
+.aurelia-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.2rem 1.5rem;
+    border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+    background: rgba(10, 10, 14, 0.6);
+}
+
+.aurelia-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, var(--aur-gold-start), var(--aur-gem-purple));
+    display: grid;
+    place-items: center;
+    font-size: 1.6rem;
+    flex-shrink: 0;
+    box-shadow: 0 0 20px rgba(201, 168, 76, 0.3);
+    overflow: hidden;
+}
+
+.aurelia-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.aurelia-title h2 {
+    margin: 0;
+    font-family: Didot, "Bodoni Moda", "Times New Roman", serif;
+    font-size: 1.4rem;
+    background: linear-gradient(135deg, var(--aur-gold-start), var(--aur-gold-mid), var(--aur-gold-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+}
+
+.aurelia-title span {
+    display: block;
+    font-size: 0.78rem;
+    color: var(--aur-muted);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-top: 2px;
+}
+
+.aurelia-status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 4px;
+}
+
+.aurelia-status .status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #4caf50;
+    animation: statusPulse 2s ease-in-out infinite;
+}
+
+@keyframes statusPulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 0 6px rgba(76, 175, 80, 0);
+    }
+}
+
+.aurelia-status span {
+    font-size: 0.7rem;
+    color: #4caf50;
+    letter-spacing: 0.5px;
+}
+
+/* ---------- Chat Messages Area ---------- */
+.aurelia-chat {
+    flex: 1;
+    padding: 1.5rem;
+    overflow-y: auto;
+    max-height: 60vh;
+    min-height: 300px;
+    scroll-behavior: smooth;
+}
+
+.aurelia-chat::-webkit-scrollbar {
+    width: 5px;
+}
+
+.aurelia-chat::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.aurelia-chat::-webkit-scrollbar-thumb {
+    background: rgba(201, 168, 76, 0.2);
+    border-radius: 10px;
+}
+
+/* ---------- Message Bubbles ---------- */
+.message {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    animation: messageSlideIn 0.4s ease-out both;
+}
+
+.message.bot {
+    justify-content: flex-start;
+}
+
+.message.user {
+    justify-content: flex-end;
+}
+
+.message .avatar-small {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, var(--aur-gold-start), var(--aur-gem-purple));
+    display: grid;
+    place-items: center;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+    align-self: flex-end;
+}
+
+.message .bubble {
+    max-width: 80%;
+    padding: 0.85rem 1.1rem;
+    border-radius: 1.1rem;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.message.bot .bubble {
+    background: rgba(30, 30, 42, 0.9);
+    border: 1px solid rgba(201, 168, 76, 0.12);
+    border-bottom-left-radius: 0.3rem;
+    color: var(--aur-text);
+}
+
+.message.user .bubble {
+    background: linear-gradient(135deg, rgba(201, 168, 76, 0.15), rgba(153, 102, 204, 0.12));
+    border: 1px solid rgba(201, 168, 76, 0.25);
+    border-bottom-right-radius: 0.3rem;
+    color: var(--aur-text);
+}
+
+@keyframes messageSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---------- Typing Indicator ---------- */
+.typing-indicator {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    animation: messageSlideIn 0.3s ease-out both;
+}
+
+.typing-indicator .bubble {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0.85rem 1.2rem;
+    background: rgba(30, 30, 42, 0.9);
+    border: 1px solid rgba(201, 168, 76, 0.12);
+    border-radius: 1.1rem;
+    border-bottom-left-radius: 0.3rem;
+}
+
+.typing-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--aur-accent);
+    animation: typingBounce 1.4s ease-in-out infinite;
+}
+
+.typing-dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes typingBounce {
+
+    0%,
+    60%,
+    100% {
+        transform: translateY(0);
+        opacity: 0.4;
+    }
+
+    30% {
+        transform: translateY(-8px);
+        opacity: 1;
+    }
+}
+
+/* ---------- Input Area ---------- */
+.aurelia-input {
+    padding: 1.2rem 1.5rem;
+    border-top: 1px solid rgba(201, 168, 76, 0.1);
+    background: rgba(10, 10, 14, 0.4);
+    min-height: 80px;
+}
+
+/* ---------- Action Buttons ---------- */
+.action-buttons {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: fadeInUp 0.5s ease-out both;
+}
+
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1.8rem;
+    border: 1px solid rgba(201, 168, 76, 0.3);
+    border-radius: 2rem;
+    background: linear-gradient(180deg, rgba(42, 47, 59, 0.8), rgba(23, 26, 32, 0.9));
+    color: var(--aur-text);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-family: inherit;
+}
+
+.action-btn:hover {
+    border-color: var(--aur-gold-start);
+    box-shadow: 0 0 25px rgba(201, 168, 76, 0.2);
+    transform: translateY(-2px);
+}
+
+.action-btn:active {
+    transform: translateY(0);
+}
+
+.action-btn.primary {
+    background: linear-gradient(135deg, rgba(201, 168, 76, 0.25), rgba(255, 165, 0, 0.15));
+    border-color: rgba(201, 168, 76, 0.5);
+}
+
+.action-btn.primary:hover {
+    background: linear-gradient(135deg, rgba(201, 168, 76, 0.35), rgba(255, 165, 0, 0.25));
+    box-shadow: 0 0 35px rgba(201, 168, 76, 0.3);
+}
+
+/* ---------- Gender Selection Cards ---------- */
+.gender-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    animation: fadeInUp 0.5s ease-out both;
+}
+
+.gender-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 1.8rem 1rem;
+    border: 1px solid rgba(201, 168, 76, 0.2);
+    border-radius: 1rem;
+    background: linear-gradient(180deg, rgba(30, 30, 42, 0.8), rgba(18, 18, 22, 0.9));
+    cursor: pointer;
+    transition: all 0.35s ease;
+    font-family: inherit;
+    color: var(--aur-text);
+}
+
+.gender-card:hover {
+    border-color: var(--aur-gold-start);
+    box-shadow: 0 0 30px var(--aur-glow);
+    transform: translateY(-4px);
+}
+
+.gender-card .gender-icon {
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
+.gender-card .gender-label {
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* ---------- Birth Data Form ---------- */
+.birth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    animation: fadeInUp 0.5s ease-out both;
+}
+
+.birth-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.birth-form label {
+    font-size: 0.82rem;
+    color: var(--aur-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.birth-form input,
+.birth-form select {
+    background: rgba(15, 17, 23, 0.9);
+    border: 1px solid rgba(201, 168, 76, 0.2);
+    border-radius: 0.6rem;
+    padding: 0.75rem 1rem;
+    color: var(--aur-text);
+    font-size: 0.95rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+.birth-form input:focus,
+.birth-form select:focus {
+    outline: none;
+    border-color: var(--aur-gold-start);
+    box-shadow: 0 0 15px rgba(201, 168, 76, 0.1);
+}
+
+.birth-form .form-row-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.birth-form .submit-row {
+    margin-top: 0.5rem;
+}
+
+/* ---------- Processing Animation ---------- */
+.processing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+    animation: fadeInUp 0.5s ease-out both;
+}
+
+.crystal-loader {
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.crystal-loader .facet {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    animation: crystalSpin 2s ease-in-out infinite;
+}
+
+.crystal-loader .facet:nth-child(1) {
+    top: 0;
+    left: 30px;
+    background: var(--aur-gold-start);
+    animation-delay: 0s;
+}
+
+.crystal-loader .facet:nth-child(2) {
+    top: 20px;
+    left: 55px;
+    background: var(--aur-gem-purple);
+    animation-delay: 0.2s;
+}
+
+.crystal-loader .facet:nth-child(3) {
+    top: 50px;
+    left: 50px;
+    background: var(--aur-gem-blue);
+    animation-delay: 0.4s;
+}
+
+.crystal-loader .facet:nth-child(4) {
+    top: 55px;
+    left: 20px;
+    background: var(--aur-gold-end);
+    animation-delay: 0.6s;
+}
+
+.crystal-loader .facet:nth-child(5) {
+    top: 25px;
+    left: 5px;
+    background: var(--aur-silver-mid);
+    animation-delay: 0.8s;
+}
+
+@keyframes crystalSpin {
+
+    0%,
+    100% {
+        transform: scale(0.6) rotate(0deg);
+        opacity: 0.3;
+    }
+
+    50% {
+        transform: scale(1.2) rotate(180deg);
+        opacity: 1;
+    }
+}
+
+.processing-text {
+    font-size: 1rem;
+    color: var(--aur-muted);
+    letter-spacing: 1px;
+    animation: processingPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes processingPulse {
+
+    0%,
+    100% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+/* ---------- Result Cards ---------- */
+.results-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.result-card {
+    background: linear-gradient(180deg, rgba(30, 30, 42, 0.9), rgba(18, 18, 26, 0.95));
+    border: 1px solid rgba(201, 168, 76, 0.15);
+    border-radius: 1rem;
+    padding: 1.2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    animation: resultReveal 0.6s ease-out both;
+}
+
+.result-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.result-card:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.result-card:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.result-card:nth-child(4) {
+    animation-delay: 0.7s;
+}
+
+.result-card:hover {
+    border-color: var(--aur-gold-start);
+    box-shadow: 0 4px 25px rgba(201, 168, 76, 0.15);
+    transform: translateY(-3px);
+}
+
+.result-card .result-category {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--aur-muted);
+    margin-bottom: 0.6rem;
+}
+
+.result-card .result-image {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 0.6rem;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, rgba(201, 168, 76, 0.1), transparent);
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 0 20px rgba(201, 168, 76, 0.08);
+}
+
+.result-card .result-image img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+.result-card .result-gem-name {
+    font-family: Didot, "Bodoni Moda", "Times New Roman", serif;
+    font-size: 1.15rem;
+    margin: 0;
+    background: linear-gradient(135deg, var(--aur-gold-start), var(--aur-gold-mid), var(--aur-gold-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+}
+
+.result-card .result-detail {
+    font-size: 0.78rem;
+    color: var(--aur-muted);
+    margin-top: 0.3rem;
+}
+
+@keyframes resultReveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ---------- Inquiry Form ---------- */
+.inquiry-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    animation: fadeInUp 0.5s ease-out both;
+}
+
+.inquiry-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.inquiry-form label {
+    font-size: 0.82rem;
+    color: var(--aur-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.inquiry-form input,
+.inquiry-form select,
+.inquiry-form textarea {
+    background: rgba(15, 17, 23, 0.9);
+    border: 1px solid rgba(201, 168, 76, 0.2);
+    border-radius: 0.6rem;
+    padding: 0.75rem 1rem;
+    color: var(--aur-text);
+    font-size: 0.95rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+.inquiry-form input:focus,
+.inquiry-form select:focus,
+.inquiry-form textarea:focus {
+    outline: none;
+    border-color: var(--aur-gold-start);
+    box-shadow: 0 0 15px rgba(201, 168, 76, 0.1);
+}
+
+.inquiry-form .form-section-title {
+    font-size: 0.85rem;
+    color: var(--aur-accent);
+    font-weight: 600;
+    margin-top: 0.5rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+}
+
+.gem-weight-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+.gem-weight-row .gem-name-fixed {
+    font-size: 0.9rem;
+    color: var(--aur-text);
+    font-weight: 600;
+}
+
+.gem-weight-row .gem-category-hint {
+    font-size: 0.7rem;
+    color: var(--aur-muted);
+    display: block;
+}
+
+/* Honeypot - visually hidden */
+.honey-field {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+}
+
+/* ---------- Thank You Screen ---------- */
+.thankyou-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+    animation: fadeInUp 0.5s ease-out both;
+}
+
+.thankyou-icon {
+    font-size: 3rem;
+    animation: thankYouPop 0.6s ease-out both;
+}
+
+@keyframes thankYouPop {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.thankyou-container h3 {
+    font-family: Didot, "Bodoni Moda", "Times New Roman", serif;
+    font-size: 1.5rem;
+    background: linear-gradient(135deg, var(--aur-gold-start), var(--aur-gold-mid));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+    margin: 0;
+}
+
+.thankyou-container p {
+    color: var(--aur-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 420px;
+}
+
+/* ---------- General Animations ---------- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---------- Loading State for Submit ---------- */
+.action-btn.loading {
+    position: relative;
+    color: transparent;
+    pointer-events: none;
+}
+
+.action-btn.loading::after {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(201, 168, 76, 0.3);
+    border-top-color: var(--aur-gold-start);
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ---------- Error Message ---------- */
+.form-error {
+    color: #ff6b6b;
+    font-size: 0.82rem;
+    padding: 0.5rem 0.75rem;
+    background: rgba(255, 107, 107, 0.08);
+    border: 1px solid rgba(255, 107, 107, 0.2);
+    border-radius: 0.5rem;
+    animation: fadeInUp 0.3s ease-out both;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 640px) {
+    #aurelia-app {
+        padding: 1rem 0.5rem 2rem;
+    }
+
+    .aurelia-container {
+        border-radius: 1rem;
+    }
+
+    .aurelia-header {
+        padding: 1rem;
+    }
+
+    .aurelia-avatar {
+        width: 42px;
+        height: 42px;
+        font-size: 1.3rem;
+    }
+
+    .aurelia-title h2 {
+        font-size: 1.2rem;
+    }
+
+    .aurelia-chat {
+        padding: 1rem;
+        max-height: 50vh;
+    }
+
+    .message .bubble {
+        max-width: 90%;
+        font-size: 0.9rem;
+    }
+
+    .aurelia-input {
+        padding: 1rem;
+    }
+
+    .gender-cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+    }
+
+    .gender-card {
+        padding: 1.2rem 0.75rem;
+    }
+
+    .gender-card .gender-icon {
+        font-size: 2rem;
+    }
+
+    .birth-form .form-row-2col {
+        grid-template-columns: 1fr;
+    }
+
+    .results-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+    }
+
+    .result-card .result-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .result-card .result-image img {
+        width: 52px;
+        height: 52px;
+    }
+
+    .result-card .result-gem-name {
+        font-size: 1rem;
+    }
+
+    .gem-weight-row {
+        grid-template-columns: 1fr;
+        gap: 0.4rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .results-grid {
+        grid-template-columns: 1fr;
+    }
+}
