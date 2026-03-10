@@ -5,12 +5,13 @@ This is the Aurex Gem House website - a luxury gemstone showcase targeting custo
 
 ---
 
-## 📊 Current State (Feb 14, 2026)
+## 📊 Current State (Mar 10, 2026)
 
 ### Status: ✅ Production-Ready
-- **Total Pages:** 33 HTML pages (with 4 language variants each)
-- **Gemstone Pages:** 42 detailed gemstone pages
-- **Deployment:** Live on GitHub Pages (aurexgemhouse.com)
+- **Total HTML Pages:** 224 (root pages × 4 languages + gem-pages × 4 languages + includes)
+- **Gemstone Pages:** 42 per language × 4 languages = 168 detail pages
+- **Header/Footer Includes:** 8 HTML templates (4 headers + 4 footers)
+- **Deployment:** Live on GitHub Pages (aurexgemhouse.store)
 - **Repository:** aurexgemhouse/aurex-gem-house
 
 ---
@@ -33,8 +34,8 @@ Each main page has 4 versions:
 - `.zh-tw.html` - Traditional Chinese (繁體)
 - `.ja.html` - Japanese (日本語)
 
-### Gemstone Detail Pages (gem-pages/en/)
-42 individual gemstone pages with detailed information about:
+### Gemstone Detail Pages
+42 pages per language in `gem-pages/en/`, `gem-pages/cn/`, `gem-pages/jp/`, `gem-pages/tw/` with:
 - Origin and quality
 - Color and clarity characteristics
 - Cultural significance
@@ -45,9 +46,13 @@ Each main page has 4 versions:
 ```
 assets/
 ├── css/styles.css         # Main stylesheet
-├── js/main.js             # Language switcher
+├── js/main.js             # Header/footer loader, language switcher, contact form
+├── includes/              # JS-loaded header/footer templates (8 files)
+│   ├── header-{en,ja,zh-cn,zh-tw}.html
+│   └── footer-{en,ja,zh-cn,zh-tw}.html
 └── images/
-    ├── gemstones/        # 100+ gemstone images (PNG)
+    ├── gemstones/        # 147 gemstone images (PNG)
+    ├── favicon/          # Favicon files (multiple sizes)
     ├── logo/             # Brand logos
     └── ui/               # UI icons (SVG)
 ```
@@ -75,7 +80,9 @@ assets/
 
 ### Multilingual Support
 - Language switcher in header (EN / 简体 / 繁體 / 日本語)
-- JavaScript-based language switching
+- JS-loaded header/footer templates per language
+- Directory-based switching for gem-pages (`/en/` → `/cn/` → `/tw/` → `/jp/`)
+- Suffix-based switching for root pages (`.html` → `.zh-cn.html` → `.zh-tw.html` → `.ja.html`)
 - Maintains consistent structure across languages
 
 ### SEO Optimization
@@ -137,12 +144,16 @@ assets/
 5. SSL enabled automatically
 
 ### Recent Major Updates
-- ✅ Feb 13-14: Updated gemstone image paths
+- ✅ Mar 10: Restored CJK text in 20 corrupted non-English pages
+- ✅ Mar 10: Fixed language switcher for gem-pages (directory-based)
+- ✅ Mar 10: Added 9 missing gemstone images to 4-gems/
+- ✅ Mar 10: Translated legal pages to ZH-CN, ZH-TW, JA
+- ✅ Mar 10: Created gem-pages in CN, JP, TW (42 pages each)
+- ✅ Mar: JS-loaded header/footer with 4 language templates
+- ✅ Feb 14: Updated gemstone image paths
 - ✅ Feb 12: Created 5 new gemstone pages
 - ✅ Feb 12: Linked all homepage gems to detail pages
-- ✅ Feb 11: Cleaned up planetary page Sanskrit names
 - ✅ Feb 11: Mass image update (SVG → PNG)
-- ✅ Feb 10: Footer styling refinements
 - ✅ Feb 2: Contact form redirect fixes
 
 ---
@@ -172,7 +183,7 @@ assets/
 - Progressive enhancement approach
 
 ### Performance
-- Minimal JavaScript (language switcher only)
+- Minimal JavaScript (header/footer loader + language switcher)
 - Optimized images
 - Clean, efficient CSS
 - Fast page load times
@@ -248,6 +259,6 @@ assets/
 
 ---
 
-**Last Updated:** February 14, 2026  
+**Last Updated:** March 10, 2026  
 **Maintained by:** Gemini AI Assistant  
 **Purpose:** Provide context for future development and updates

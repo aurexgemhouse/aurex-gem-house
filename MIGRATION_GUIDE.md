@@ -1,7 +1,7 @@
 # 🚀 Aurex Gem House - Migration Guide
 
-**Last Updated:** February 16, 2026  
-**Version:** 3.0
+**Last Updated:** March 10, 2026  
+**Version:** 4.0
 
 This guide will help you migrate the Aurex Gem House website to a new laptop with minimal effort.
 
@@ -140,39 +140,35 @@ new-website-3/
 ```
 assets/
 ├── css/
-│   └── styles.css                 # Main stylesheet (all styles in one file)
-├── 
+│   └── styles.css                 # Main stylesheet
 ├── js/
-│   └── main.js                    # Language switcher & interactions
-├── 
+│   └── main.js                    # Header/footer loader, language switcher, contact form
+├── includes/                      # JS-loaded header/footer templates
+│   ├── header-en.html, header-ja.html, header-zh-cn.html, header-zh-tw.html
+│   └── footer-en.html, footer-ja.html, footer-zh-cn.html, footer-zh-tw.html
 └── images/
     ├── gemstones/
-    │   ├── featured/              # Homepage featured gems (14 PNG images)
-    │   ├── 4-gems/                # Additional gem images (38 PNG images)
+    │   ├── featured/              # Homepage featured gems (14 PNG)
+    │   ├── 4-gems/                # Additional gem images (47 PNG)
     │   ├── birthstones/           # Monthly birthstone images (16 PNG)
     │   ├── astrology/             # Zodiac sign stones (12 PNG)
     │   ├── planets/               # Planetary gems (9 PNG)
     │   ├── chinese-zodiac/        # Chinese zodiac gems (12 PNG)
-    │   ├── additional/            # Alternative gem views (6 PNG)
-    │   └── *.svg                  # Legacy SVG files (14 files)
-    ├── 
+    │   └── additional/            # Alternative gem views (6 PNG)
+    ├── favicon/                   # Favicon files (multiple sizes)
     ├── logo/
-    │   ├── aurex-logo.png
-    │   └── aurex-gem-house-logo.png
-    └── 
-    └── ui/
-        ├── globe.svg              # Language switcher icon
-        ├── play.svg
-        ├── pin.svg
-        ├── phone.svg
-        └── mail.svg
+    │   └── aurex-logo.png
+    └── ui/                        # UI icons (SVG)
 ```
 
 ### Gemstone Pages Directory
 
 ```
 gem-pages/
-└── en/                            # English gemstone detail pages (42 pages)
+├── en/                            # English gemstone detail pages (42 pages)
+├── cn/                            # Simplified Chinese (42 pages)
+├── jp/                            # Japanese (42 pages)
+└── tw/                            # Traditional Chinese (42 pages)
     ├── alexandrite.html
     ├── amber.html
     ├── amethyst.html
@@ -515,9 +511,9 @@ git log --oneline -10
 
 - **Zero Dependencies:** No npm packages, no build process
 - **Fully Static:** Works offline, can be opened directly in browser
-- **Image Heavy:** ~130+ PNG images, ensure they're all present
+- **Image Heavy:** 147 PNG images, ensure they're all present
 - **Multilingual:** 4 languages (EN, JA, ZH-CN, ZH-TW)
-- **42 Gemstone Pages:** All in `/gem-pages/en/` directory
+- **168 Gemstone Pages:** 42 per language in `/gem-pages/{en,cn,jp,tw}/`
 - **Modern CSS:** Uses flexbox, grid, custom properties
 - **Vanilla JS:** No jQuery or frameworks
 

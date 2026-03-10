@@ -1,6 +1,6 @@
 # 📂 Aurex Gem House - File System Inventory
 
-**Generated:** February 16, 2026  
+**Generated:** March 10, 2026  
 **Purpose:** Complete file inventory for migration reference
 
 ---
@@ -9,14 +9,15 @@
 
 | Category | Count | Total Size |
 |----------|-------|------------|
-| **Total Files** | 150+ files | Approx. 50-100 MB |
-| **HTML Pages** | 78 pages | English + 3 languages |
-| **Gemstone Detail Pages** | 42 pages | English only |
-| **PNG Images** | 130+ images | Assets/gemstones |
-| **SVG Files** | 19 files | Legacy + UI icons |
-| **CSS Files** | 1 file | `styles.css` |
-| **JS Files** | 1 file | `main.js` |
-| **Documentation** | 8+ MD files | Guides and references |
+| **Total Files** | 300+ files | Approx. 50-100 MB |
+| **HTML Pages** | 224 pages | English + 3 languages |
+| **Gemstone Detail Pages** | 168 pages | 42 per language × 4 |
+| **Header/Footer Includes** | 8 files | 4 headers + 4 footers |
+| **PNG Images** | 147 images | Assets/gemstones |
+| **SVG Files** | 20 files | Legacy + UI icons |
+| **CSS Files** | 2 files | `styles.css` + guide |
+| **JS Files** | 4 files | `main.js` + helpers |
+| **Documentation** | 14 MD files | Guides and references |
 
 ---
 
@@ -88,12 +89,15 @@ planets.zh-tw.html
 zodiac.zh-tw.html
 ```
 
-#### Legal & Policy Pages (4 files)
+#### Legal & Policy Pages (16 files — 4 pages × 4 languages)
 ```
-privacy-policy.html                # Privacy policy
-terms.html                         # Terms of service
-shipping.html                      # Shipping policy
-returns.html                       # Return policy
+privacy-policy.html                # Privacy policy (EN)
+privacy-policy.ja.html             # Privacy policy (JA)
+privacy-policy.zh-cn.html          # Privacy policy (ZH-CN)
+privacy-policy.zh-tw.html          # Privacy policy (ZH-TW)
+terms.html                         # Terms of service (+ 3 languages)
+shipping.html                      # Shipping policy (+ 3 languages)
+returns.html                       # Return policy (+ 3 languages)
 ```
 
 #### Testing & Development (3 files)
@@ -118,9 +122,22 @@ aurex-gem-house-logo.jpg           # Company logo (104 KB)
 assets/css/styles.css              # Main stylesheet (~50-100 KB)
 ```
 
-#### JavaScript Directory (1 file)
+#### JavaScript Directory (1 main file)
 ```
-assets/js/main.js                  # Language switcher & interactions
+assets/js/main.js                  # Header/footer loader, language switcher, contact form
+```
+
+#### Header/Footer Includes (8 files)
+```
+assets/includes/
+├── header-en.html                 # English header
+├── header-ja.html                 # Japanese header
+├── header-zh-cn.html              # Simplified Chinese header
+├── header-zh-tw.html              # Traditional Chinese header
+├── footer-en.html                 # English footer
+├── footer-ja.html                 # Japanese footer
+├── footer-zh-cn.html              # Simplified Chinese footer
+└── footer-zh-tw.html              # Traditional Chinese footer
 ```
 
 #### Logo Directory (2 files)
@@ -284,9 +301,9 @@ assets/images/gemstones/
 
 ---
 
-### Gemstone Detail Pages (42 HTML Files)
+### Gemstone Detail Pages (168 HTML Files — 42 per language)
 
-All located in: `gem-pages/en/`
+Directories: `gem-pages/en/`, `gem-pages/cn/`, `gem-pages/jp/`, `gem-pages/tw/`
 
 #### Premium Sapphires (6 pages)
 ```
@@ -358,12 +375,12 @@ imperial-topaz.html
 
 | Extension | Count | Purpose |
 |-----------|-------|---------|
-| `.html` | 78 | Web pages |
-| `.png` | 130+ | Gemstone & logo images |
-| `.svg` | 19 | Icons & legacy images |
-| `.css` | 1 | Styling |
-| `.js` | 1 | Interactivity |
-| `.md` | 8+ | Documentation |
+| `.html` | 224 | Web pages (root + gem-pages + includes) |
+| `.png` | 147 | Gemstone & logo images |
+| `.svg` | 20 | Icons & legacy images |
+| `.css` | 2 | Styling |
+| `.js` | 4 | Interactivity |
+| `.md` | 14 | Documentation |
 | `.jpg` | 1 | Logo |
 | (no ext) | 2 | Config files |
 
@@ -371,10 +388,10 @@ imperial-topaz.html
 
 | Category | Files | Description |
 |----------|-------|-------------|
-| **Pages** | 78 | HTML pages (main + gemstones) |
-| **Images** | 150+ | PNG + SVG images |
-| **Code** | 2 | CSS + JavaScript |
-| **Docs** | 8+ | Markdown documentation |
+| **Pages** | 224 | HTML pages (root + gemstones + includes) |
+| **Images** | 167+ | PNG + SVG images |
+| **Code** | 6 | CSS + JavaScript |
+| **Docs** | 14 | Markdown documentation |
 | **Config** | 4 | Git, domain, verification |
 | **Brand** | 2 | Logos |
 
@@ -480,4 +497,4 @@ Or on Windows PowerShell:
 
 ---
 
-**This inventory was auto-generated. Last updated: February 16, 2026**
+**This inventory was auto-generated. Last updated: March 10, 2026**

@@ -358,6 +358,6 @@ assets/images/
 
 ---
 
-**Last Updated:** February 14, 2026  
-**Version:** 1.0  
+**Last Updated:** March 10, 2026  
+**Version:** 2.0  
 **Purpose:** Maintain design consistency and code quality across Aurex Gem House website

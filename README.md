@@ -8,7 +8,7 @@ A premium gemstone website showcasing luxury gems sourced from Sri Lanka and Tha
 
 ## 🌐 Live Website
 
-**Domain:** aurexgemhouse.com  
+**Domain:** aurexgemhouse.store  
 **Hosted on:** GitHub Pages  
 **Repository:** aurexgemhouse/aurex-gem-house
 
@@ -18,9 +18,10 @@ A premium gemstone website showcasing luxury gems sourced from Sri Lanka and Tha
 
 Aurex Gem House is a multilingual luxury gemstone showcase featuring:
 
-- **42 individual gemstone pages** with detailed information
+- **168 gemstone detail pages** (42 per language × 4 languages)
 - **Multilingual support** (English, Simplified Chinese, Traditional Chinese, Japanese)
 - **Educational resources** (Birthstones, Astrology, Planetary Gems, Chinese Zodiac)
+- **JS-loaded header/footer** with language-specific includes
 - **Premium design** with elegant typography and refined aesthetics
 - **Responsive layout** optimized for all devices
 
@@ -37,8 +38,8 @@ Aurex Gem House is a multilingual luxury gemstone showcase featuring:
 - Planets (`planets.html`) - Vedic planetary gemstones (Navaratna)
 - Chinese Zodiac (`zodiac.html`) - Chinese zodiac gemstones
 
-### Gemstone Detail Pages (42 Pages)
-Located in `/gem-pages/en/`:
+### Gemstone Detail Pages (168 Pages — 42 per Language)
+Located in `/gem-pages/en/`, `/gem-pages/cn/`, `/gem-pages/jp/`, `/gem-pages/tw/`:
 
 **Featured Sapphires:** Blue Sapphire, Padparadscha Sapphire, Pink Sapphire, White Sapphire, Yellow Sapphire, Star Sapphire
 
@@ -50,11 +51,16 @@ Located in `/gem-pages/en/`:
 
 **Additional Gems:** Amber, Bloodstone, Carnelian, Jade, Kunzite, Lapis Lazuli, Morganite, Obsidian, Onyx, Paraiba Tourmaline, Red Coral, Rose Quartz, Sodalite, Tiger's Eye
 
-### Legal & Policy Pages
-- Privacy Policy (`privacy-policy.html`)
-- Terms of Service (`terms.html`)
-- Shipping Policy (`shipping.html`)
-- Return Policy (`returns.html`)
+### Legal & Policy Pages (4 Languages Each)
+- Privacy Policy (`privacy-policy.html` + `.zh-cn`, `.zh-tw`, `.ja`)
+- Terms of Service (`terms.html` + `.zh-cn`, `.zh-tw`, `.ja`)
+- Shipping Policy (`shipping.html` + `.zh-cn`, `.zh-tw`, `.ja`)
+- Return Policy (`returns.html` + `.zh-cn`, `.zh-tw`, `.ja`)
+
+### Header/Footer Includes
+Dynamically loaded per language via `main.js`:
+- `assets/includes/header-en.html`, `header-ja.html`, `header-zh-cn.html`, `header-zh-tw.html`
+- `assets/includes/footer-en.html`, `footer-ja.html`, `footer-zh-cn.html`, `footer-zh-tw.html`
 
 ---
 
@@ -86,20 +92,23 @@ assets/
 ├── css/
 │   └── styles.css          # Main stylesheet
 ├── js/
-│   └── main.js             # Language switcher & interactions
+│   └── main.js             # Header/footer loader, language switcher, contact form
+├── includes/               # JS-loaded header/footer templates (8 HTML files)
+│   ├── header-en.html, header-ja.html, header-zh-cn.html, header-zh-tw.html
+│   └── footer-en.html, footer-ja.html, footer-zh-cn.html, footer-zh-tw.html
 └── images/
     ├── gemstones/
     │   ├── featured/       # Homepage featured gems (14 PNG images)
-    │   ├── 4-gems/         # Additional gem images (38 PNG images)
+    │   ├── 4-gems/         # Additional gem images (47 PNG images)
     │   ├── birthstones/    # Monthly birthstone images (16 PNG)
     │   ├── astrology/      # Zodiac sign stones (12 PNG)
     │   ├── planets/        # Planetary gems (9 PNG)
     │   ├── chinese-zodiac/ # Chinese zodiac gems (12 PNG)
     │   ├── additional/     # Alternative views (6 PNG)
-    │   └── *.svg           # Legacy SVG files (14 files)
+    │   └── *.svg           # Legacy SVG files
+    ├── favicon/            # Favicon files (multiple sizes)
     ├── logo/
-    │   ├── aurex-logo.png
-    │   └── aurex-gem-house-logo.png
+    │   └── aurex-logo.png
     └── ui/
         └── *.svg           # UI icons (globe, play, pin, phone, mail)
 ```
@@ -115,10 +124,14 @@ assets/
 **SSL:** Enabled via GitHub Pages
 
 ### Recent Updates
-- ✅ Favicon implemented across all pages (`favicon.png`)
-- ✅ Updated gemstone images (PNG format)
-- ✅ All gem cards linked to detail pages
-- ✅ Multilingual structure complete
+- ✅ Mar 10: Fixed encoding issues (CJK text restoration in 20 pages)
+- ✅ Mar 10: Fixed language switcher for gem-pages (directory-based switching)
+- ✅ Mar 10: Added 9 missing gemstone images
+- ✅ Mar 10: Translated legal pages (privacy, terms, shipping, returns) to ZH-CN, ZH-TW, JA
+- ✅ Mar 10: Created gem-pages in CN, JP, TW (42 pages each)
+- ✅ Mar: JS-loaded header/footer with 4 language variants
+- ✅ Feb 14: Updated gemstone images (SVG → PNG)
+- ✅ Feb 12: All gem cards linked to detail pages
 - ✅ Responsive design optimized
 
 ---
@@ -161,5 +174,5 @@ See individual documentation files for details:
 
 ---
 
-**Last Updated:** February 14, 2026  
-**Version:** 3.0 (Production)
+**Last Updated:** March 10, 2026  
+**Version:** 4.0 (Production)
