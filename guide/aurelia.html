@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b0b0d" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/favicon-180x180.png" />
+  <title>Aurelia – Gem Intelligence Engine | Aurex Gem House</title>
+  <meta name="description"
+    content="Discover your personalised gemstone recommendations with Aurelia, Aurex Gem House's Gem Intelligence Engine. Based on your birth chart, zodiac, and Vedic astrology." />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <link rel="stylesheet" href="../assets/css/aurelia.css" />
+  <script defer src="../assets/js/main.js"></script>
+  <script defer src="../assets/js/api-submit.js"></script>
+  <script defer src="../assets/js/aurelia-engine.js"></script>
+</head>
+
+<body>
+  <header class="site-header" id="site-header" role="banner"></header>
+
+  <main id="main" tabindex="-1">
+    <div id="aurelia-app">
+      <!-- Floating gem particles -->
+      <div class="aurelia-particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+      </div>
+
+      <!-- Chat container -->
+      <div class="aurelia-container">
+        <!-- Header -->
+        <div class="aurelia-header">
+          <div class="aurelia-avatar">💎</div>
+          <div class="aurelia-title">
+            <h2>Aurelia</h2>
+            <span>Gem Intelligence Engine</span>
+            <div class="aurelia-status">
+              <span class="status-dot"></span>
+              <span>Online</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chat messages -->
+        <div class="aurelia-chat" id="aurelia-messages">
+          <!-- Messages rendered dynamically by aurelia-engine.js -->
+        </div>
+
+        <!-- Input area -->
+        <div class="aurelia-input" id="aurelia-input">
+          <!-- Buttons/forms rendered dynamically by aurelia-engine.js -->
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer" id="site-footer" role="contentinfo"></footer>
+</body>
+
+</html>
