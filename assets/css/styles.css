@@ -456,7 +456,8 @@ select:focus,
 }
 
 .muted {
-    color: var(--muted)
+    color: var(--muted);
+    text-align: center
 }
 
 /* Aurelia CTA Banner */
