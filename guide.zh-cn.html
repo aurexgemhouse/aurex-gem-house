@@ -9,8 +9,8 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png" />
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/favicon-180x180.png" />
-  <title>宝石指南 | Aurex Gem House</title>
-  <meta name="description" content="使用 Aurelia 宝石智能引擎，发现专属于您的宝石推荐。基于您的出生星盘、星座和吠陀占星术。" />
+  <title>???? | Aurex Gem House</title>
+  <meta name="description" content="?? Aurelia ??????,??????????????????????????????" />
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link rel="stylesheet" href="assets/css/aurelia.css" />
   <script defer src="assets/js/main.js"></script>
@@ -24,31 +24,11 @@
 </head>
 
 <body>
-  <header class="site-header" role="banner">
-    <a class="skip-link" href="#main">跳至内容</a>
-    <div class="branding"><a href="index.zh-cn.html" class="brand" aria-label="Aurex Gem House 首页"><img
-          src="assets/images/logo/aurex-logo.png" alt="Aurex Gem House logo" class="logo-img" /></a></div>
-    <nav class="site-nav" aria-label="主导航">
-      <ul>
-        <li><a href="index.zh-cn.html">首页</a></li>
-        <li><a href="about.zh-cn.html">关于我们</a></li>        <li><a href="birthstones.zh-cn.html">诞生石</a></li>
-        <li><a href="astrology.zh-cn.html">星座宝石</a></li>
-        <li><a href="planets.zh-cn.html">行星宝石</a></li>
-        <li><a href="zodiac.zh-cn.html">生肖宝石</a></li>
-      </ul>
-    </nav>
-    <div class="lang-switch" role="group" aria-label="语言切换">
-      <img src="assets/images/ui/globe.svg" alt="" class="icon" aria-hidden="true" />
-      <button data-lang="en">EN</button>
-      <button data-lang="zh-CN" aria-pressed="true">简体</button>
-      <button data-lang="zh-TW">繁體</button>
-      <button data-lang="ja">日本語</button>
-    </div>
-  </header>
+  <header class="site-header" id="site-header" role="banner"></header>
 
   <main id="main" tabindex="-1">
     <div id="aurelia-app">
-      <!-- 悬浮宝石粒子 -->
+      <!-- ?????? -->
       <div class="aurelia-particles">
         <div class="particle"></div>
         <div class="particle"></div>
@@ -60,68 +40,34 @@
         <div class="particle"></div>
       </div>
 
-      <!-- 聊天容器 -->
+      <!-- ???? -->
       <div class="aurelia-container">
-        <!-- 头部 -->
+        <!-- ?? -->
         <div class="aurelia-header">
-          <div class="aurelia-avatar">💎</div>
+          <div class="aurelia-avatar">??</div>
           <div class="aurelia-title">
             <h2>Aurelia</h2>
-            <span>宝石智能引擎</span>
+            <span>??????</span>
             <div class="aurelia-status">
               <span class="status-dot"></span>
-              <span>在线</span>
+              <span>??</span>
             </div>
           </div>
         </div>
 
-        <!-- 聊天消息 -->
+        <!-- ???? -->
         <div class="aurelia-chat" id="aurelia-messages">
-          <!-- 消息由 aurelia-engine.js 动态渲染 -->
+          <!-- ??? aurelia-engine.js ???? -->
         </div>
 
-        <!-- 输入区域 -->
+        <!-- ???? -->
         <div class="aurelia-input" id="aurelia-input">
-          <!-- 按钮/表单由 aurelia-engine.js 动态渲染 -->
+          <!-- ??/??? aurelia-engine.js ???? -->
         </div>
       </div>
     </div>
   </main>
-
-  <footer class="site-footer" role="contentinfo">
-    <div class="footer-columns">
-      <section aria-labelledby="cat-heading">
-        <h3 id="cat-heading">宝石分类</h3>
-        <ul>          <li><a href="birthstones.zh-cn.html">诞生石</a></li>
-          <li><a href="astrology.zh-cn.html">星座宝石</a></li>
-          <li><a href="planets.zh-cn.html">行星宝石</a></li>
-        </ul>
-      </section>
-      <section aria-labelledby="res-heading">
-        <h3 id="res-heading">资源</h3>
-        <ul>        </ul>
-      </section>
-      <section aria-labelledby="legal-heading">
-        <h3 id="legal-heading">法律信息</h3>
-        <ul>
-          <li><a href="privacy-policy.html">隐私政策</a></li>
-          <li><a href="terms.html">服务条款</a></li>
-          <li><a href="shipping.html">配送政策</a></li>
-          <li><a href="returns.html">退货政策</a></li>
-        </ul>
-      </section>
-      <section aria-labelledby="about-heading">
-        <h3 id="about-heading">关于</h3>
-        <ul>
-          <li><a href="about.zh-cn.html">关于我们</a></li>
-        </ul>
-        <p class="footer-tagline">专业宝石学家，全球采购认证宝石。</p>
-        <p class="footer-location"><img class="icon" src="assets/images/ui/pin.svg" alt="" aria-hidden="true" /> 悉尼
-          · 科伦坡 · 曼谷</p>
-      </section>
-    </div>
-    <p class="muted">© 2026 Aurex Gem House · 保留所有权利。</p>
-  </footer>
+  <footer class="site-footer" id="site-footer" role="contentinfo"></footer>
 </body>
 
 </html>

@@ -9,8 +9,8 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png" />
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/favicon-180x180.png" />
-  <title>宝石ガイド | Aurex Gem House</title>
-  <meta name="description" content="Aurelia 宝石インテリジェンスエンジンで、あなただけの宝石レコメンドを発見。出生チャート、星座、ヴェーダ占星術に基づいて。" />
+  <title>????? | Aurex Gem House</title>
+  <meta name="description" content="Aurelia ????????????????????????????????????????????????????????" />
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link rel="stylesheet" href="assets/css/aurelia.css" />
   <script defer src="assets/js/main.js"></script>
@@ -24,31 +24,11 @@
 </head>
 
 <body>
-  <header class="site-header" role="banner">
-    <a class="skip-link" href="#main">コンテンツへスキップ</a>
-    <div class="branding"><a href="index.ja.html" class="brand" aria-label="Aurex Gem House ホーム"><img
-          src="assets/images/logo/aurex-logo.png" alt="Aurex Gem House logo" class="logo-img" /></a></div>
-    <nav class="site-nav" aria-label="メインナビ">
-      <ul>
-        <li><a href="index.ja.html">ホーム</a></li>
-        <li><a href="about.ja.html">会社概要</a></li>        <li><a href="birthstones.ja.html">誕生石</a></li>
-        <li><a href="astrology.ja.html">星座の宝石</a></li>
-        <li><a href="planets.ja.html">惑星の宝石</a></li>
-        <li><a href="zodiac.ja.html">干支の宝石</a></li>
-      </ul>
-    </nav>
-    <div class="lang-switch" role="group" aria-label="言語切替">
-      <img src="assets/images/ui/globe.svg" alt="" class="icon" aria-hidden="true" />
-      <button data-lang="en">EN</button>
-      <button data-lang="zh-CN">简体</button>
-      <button data-lang="zh-TW">繁體</button>
-      <button data-lang="ja" aria-pressed="true">日本語</button>
-    </div>
-  </header>
+  <header class="site-header" id="site-header" role="banner"></header>
 
   <main id="main" tabindex="-1">
     <div id="aurelia-app">
-      <!-- フローティング宝石パーティクル -->
+      <!-- ??????????????? -->
       <div class="aurelia-particles">
         <div class="particle"></div>
         <div class="particle"></div>
@@ -60,68 +40,34 @@
         <div class="particle"></div>
       </div>
 
-      <!-- チャットコンテナ -->
+      <!-- ???????? -->
       <div class="aurelia-container">
-        <!-- ヘッダー -->
+        <!-- ???? -->
         <div class="aurelia-header">
-          <div class="aurelia-avatar">💎</div>
+          <div class="aurelia-avatar">??</div>
           <div class="aurelia-title">
             <h2>Aurelia</h2>
-            <span>宝石インテリジェンスエンジン</span>
+            <span>??????????????</span>
             <div class="aurelia-status">
               <span class="status-dot"></span>
-              <span>オンライン</span>
+              <span>?????</span>
             </div>
           </div>
         </div>
 
-        <!-- チャットメッセージ -->
+        <!-- ????????? -->
         <div class="aurelia-chat" id="aurelia-messages">
-          <!-- メッセージは aurelia-engine.js により動的にレンダリング -->
+          <!-- ?????? aurelia-engine.js ???????????? -->
         </div>
 
-        <!-- 入力エリア -->
+        <!-- ????? -->
         <div class="aurelia-input" id="aurelia-input">
-          <!-- ボタン/フォームは aurelia-engine.js により動的にレンダリング -->
+          <!-- ???/????? aurelia-engine.js ???????????? -->
         </div>
       </div>
     </div>
   </main>
-
-  <footer class="site-footer" role="contentinfo">
-    <div class="footer-columns">
-      <section aria-labelledby="cat-heading">
-        <h3 id="cat-heading">宝石カテゴリー</h3>
-        <ul>          <li><a href="birthstones.ja.html">誕生石</a></li>
-          <li><a href="astrology.ja.html">星座の宝石</a></li>
-          <li><a href="planets.ja.html">惑星の宝石</a></li>
-        </ul>
-      </section>
-      <section aria-labelledby="res-heading">
-        <h3 id="res-heading">リソース</h3>
-        <ul>        </ul>
-      </section>
-      <section aria-labelledby="legal-heading">
-        <h3 id="legal-heading">法的情報</h3>
-        <ul>
-          <li><a href="privacy-policy.html">プライバシーポリシー</a></li>
-          <li><a href="terms.html">利用規約</a></li>
-          <li><a href="shipping.html">配送ポリシー</a></li>
-          <li><a href="returns.html">返品ポリシー</a></li>
-        </ul>
-      </section>
-      <section aria-labelledby="about-heading">
-        <h3 id="about-heading">会社概要</h3>
-        <ul>
-          <li><a href="about.ja.html">私たちについて</a></li>
-        </ul>
-        <p class="footer-tagline">プロの宝石学者が世界中から認定宝石を厳選。</p>
-        <p class="footer-location"><img class="icon" src="assets/images/ui/pin.svg" alt="" aria-hidden="true" />
-          シドニー · コロンボ · バンコク</p>
-      </section>
-    </div>
-    <p class="muted">© 2026 Aurex Gem House · All rights reserved.</p>
-  </footer>
+  <footer class="site-footer" id="site-footer" role="contentinfo"></footer>
 </body>
 
 </html>
